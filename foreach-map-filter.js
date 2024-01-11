@@ -7,9 +7,13 @@ Examples:
 
 */
 function doubleValues(arr) {
-  arr.map(function (num) {
-    return num * 2;
+  let newArr = [];
+
+  arr.forEach(function (num) {
+    let doubleNum = num * 2;
+    newArr.push(doubleNum);
   });
+  return newArr;
 }
 
 /*
@@ -20,7 +24,11 @@ Examples:
     onlyEvenValues([5,1,2,3,10]) // [2,10]
 
 */
-function onlyEvenValues(arr) {}
+function onlyEvenValues(arr) {
+  arr.filter(function (num) {
+    num % 2 == 0;
+  });
+}
 
 /*
 Write a function called showFirstAndLast which accepts an array of strings and returns a new array with only the first and last character of each string.
