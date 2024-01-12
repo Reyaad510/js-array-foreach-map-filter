@@ -150,7 +150,13 @@ Examples:
     extractFullName([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia"}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele"}]) // ['Elie Schoppik', 'Tim Garcia', 'Matt Lane', 'Colt Steele']
 */
 
-function extractFullName(arr) {}
+function extractFullName(arr) {
+  const fullName = arr.map((nameObj) => {
+    return `${nameObj["first"]} ${nameObj["last"]}`;
+  });
+
+  return fullName;
+}
 
 /*
 Write a function called filterByValue which accepts an array of objects and a key and returns a new array with all the objects that contain that key.
