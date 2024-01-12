@@ -80,7 +80,24 @@ Examples:
     vowelCount('hmmm') // {};
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
-function vowelCount(str) {}
+function vowelCount(str) {
+  str.toLowerCase();
+  let splitStr = str.split("");
+  const vowels = "aeiou";
+  const obj = {};
+  console.log(str);
+  splitStr.forEach((val) => {
+    if (vowels.indexOf(val) !== -1) {
+      if (!obj[val]) {
+        obj[val] = 1;
+        console.log(obj);
+      } else {
+        obj[val]++;
+      }
+    }
+  });
+  return obj;
+}
 
 /*
 Write a function called doubleValuesWithMap which accepts an array and returns a new array with all the values in the array passed to the function doubled
