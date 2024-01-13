@@ -228,4 +228,12 @@ Examples:
     doubleOddNumbers([4,4,4,4,4]) // []
 */
 
-function doubleOddNumbers(arr) {}
+function doubleOddNumbers(arr) {
+  const filteredOdd = arr.filter((val) => {
+    return val % 2 !== 0;
+  });
+  const doubleOdd = filteredOdd.map((val) => {
+    return val * 2;
+  });
+  return doubleOdd;
+}
