@@ -211,7 +211,14 @@ Examples:
     removeVowels('ZZZZZZ') // ('zzzzzz')
 */
 
-function removeVowels(str) {}
+function removeVowels(str) {
+  const vowels = "aeiou";
+  const strArr = [...str.toLowerCase()];
+  const noVowelArray = strArr.filter((val) => {
+    return vowels.indexOf(val) === -1;
+  });
+  return noVowelArray.join("");
+}
 
 /*
 Write a function called doubleOddNumbers which accepts an array and returns a new array with all of the odd numbers doubled (HINT - you can use map and filter to double and then filter the odd numbers).
